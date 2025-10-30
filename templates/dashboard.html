@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowd Safety Intelligence Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1200px; margin: auto; }
+        .alerts { background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 10px; margin-bottom: 20px; }
+        .chart-container { width: 100%; height: 400px; margin-bottom: 20px; }
+        .zone { border: 1px solid #ddd; padding: 10px; margin: 10px 0; }
+        .high-risk { background-color: #ffe6e6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crowd Safety Intelligence Dashboard</h1>
+
+        <div id="alerts" class="alerts">
+            <h2>Recent Alerts</h2>
+            <ul id="alert-list"></ul>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="densityChart"></canvas>
+        </div>
+
+        <h2>Risk Zones</h2>
+        <div id="zones"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
